@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="INST377_L4_CSS.css">
     </head>
     <body>
-        <header id="heading">
-            <h1>INST377 - Lab 4</h1>
+        <header>
+            <h1 id="heading">INST377 - Lab 4</h1>
         </header>
         <div class="Main-Content">
             <div class="Box-Content-L">
@@ -17,8 +17,8 @@
                     </form>
                     <script type="text/javascript">
                         function mes() {
-                            const inp = document.formName.name.value
-                            alert('Hi' , + inp);
+                            const inp = document.getElementById('name').value
+                            alert('Hi ' + inp);
                             return false;
                         }                
                     </script>
@@ -33,7 +33,7 @@
                         function validate() {
                             var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
                             if (validation.test(document.textTester.test.value))
-                            alert('NOT ALLOWED')
+                            alert('CHARATER NOT ALLOWED')
                         }
                     </script>
                 </div>
@@ -54,11 +54,10 @@
                 </div>
                 <br>
                 <div class="R-boxes">
-                    <button>Add Text</button>
+                    <button onclick="add()">Add Text</button>
                     <script>
                         function add() {
-                             document.getElementById('heading')
-                             
+                            document.getElementById('heading').innerHTML += " - Adding Text";;
                         }
                     </script>
                 </div>
