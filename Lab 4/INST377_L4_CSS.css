@@ -1,0 +1,35 @@
+body {
+    background-color: lightblue;
+}
+
+.Box-Content-L {
+    float: left;
+    margin: 0;
+    width: 50%;
+    text-align: center;
+}
+.L-boxes {
+    padding: 10px;
+    margin: 10px;
+    background-color:blueviolet;
+    border: 2px solid white;
+    border-radius: 5px;
+    
+}
+
+.Box-Content-R {
+    float: right;
+    margin: 0;
+    width: 50%;
+    text-align: center;
+   
+    
+}
+.R-boxes {
+    padding: 10px;
+    margin: 10px;
+    background-color:blueviolet;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+}

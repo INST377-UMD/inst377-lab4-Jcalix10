@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>INST377 - Lab 4</title>
+        <link rel="stylesheet" href="INST377_L4_CSS.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="heading">INST377 - Lab 4</h1>
+        </header>
+        <div class="Main-Content">
+            <div class="Box-Content-L">
+                <div class="L-boxes">
+                    <form name="formName" onsubmit="mes()">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                        <input type="submit" value="Alert Me!">
+                    </form>
+                    <script type="text/javascript">
+                        function mes() {
+                            const inp = document.getElementById('name').value
+                            alert('Hi ' + inp);
+                            return false;
+                        }                
+                    </script>
+                </div>
+                <div class="L-boxes">
+                    <form name="textTester" onsubmit="validate()">
+                        <label for="test">Test:</label>
+                        <input type="text" id="test">
+                        <input type="submit" value="Validate Text"> 
+                    </form>
+                    <script type="text/javascript">
+                        function validate() {
+                            var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                            if (validation.test(document.textTester.test.value))
+                            alert('CHARATER NOT ALLOWED')
+                        }
+                    </script>
+                </div>
+            </div> 
+            <div class="Box-Content-R">
+                <div class="R-boxes">
+                    <button onclick="changeColor()">Change Color</button>
+                    <script type="text/javascript">
+                        function changeColor() {
+                            if (document.body.style.backgroundColor == "pink") {
+                                document.body.style.backgroundColor = "lightblue";
+                            } else {
+                                document.body.style.backgroundColor = "pink";
+                                return false;
+                            }             
+                        }
+                    </script>
+                </div>
+                <br>
+                <div class="R-boxes">
+                    <button onclick="add()">Add Text</button>
+                    <script>
+                        function add() {
+                            document.getElementById('heading').innerHTML += " - Adding Text";;
+                        }
+                    </script>
+                </div>
+            </div>  
+        </div>
+   
+    </body>
+</html>
